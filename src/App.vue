@@ -1,30 +1,43 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <section id="app">
+    <nav>awdasd</nav>
+    <section>awawdaw</section>
+  </section>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  --lightgray: #ebe9f1;
+  --purple: #7367f0;
+
+  --primaryTextColor: #5e5873;
+  --secondaryTextColor: #b9b9c3;
 }
 
-#nav {
-  padding: 30px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</style>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+<style lang="scss" scoped>
+#app {
+  width: 100%;
+  max-width: 1300px;
+  height: 99vh;
+  margin: 0.5vh auto;
+  border-radius: 0.35rem;
+  border: 1px solid var(--lightgray);
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+
+  section {
+    background-color: #5e5873;
+  }
+  nav {
+    background-color: #7367f0;
   }
 }
 </style>
