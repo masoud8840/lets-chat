@@ -1,16 +1,29 @@
 <template>
   <section id="app">
-    <nav>awdasd</nav>
-    <section>awawdaw</section>
+    <nav>
+      <navigation-header></navigation-header>
+    </nav>
+    <router-view></router-view>
   </section>
 </template>
+
+<script>
+import NavigationHeader from "./components/Navigation/NavigationHeader.vue";
+
+export default {
+  components: {
+    NavigationHeader,
+  },
+};
+</script>
 
 <style lang="scss">
 :root {
   --lightgray: #ebe9f1;
   --purple: #7367f0;
 
-  --primaryTextColor: #5e5873;
+  // --primaryTextColor: #5e5873;
+  --primaryTextColor: #6e6b7b;
   --secondaryTextColor: #b9b9c3;
 }
 
@@ -34,10 +47,8 @@
   grid-template-columns: 2fr 5fr;
 
   section {
-    background-color: #5e5873;
   }
   nav {
-    background-color: #7367f0;
   }
 }
 </style>
