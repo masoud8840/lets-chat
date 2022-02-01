@@ -1,6 +1,10 @@
 <template>
   <header>
     <!-- user-profile should placed in here -->
+    <user-profile
+      :imgSource="$store.getters.getMyImgSource"
+      :userStatus="$store.getters.getMyProfileStatus"
+    ></user-profile>
     <div class="input-group">
       <input type="text" placeholder="Search..." />
       <i class="fas fa-search"></i>
@@ -8,19 +12,31 @@
   </header>
 </template>
 
+<script>
+import UserProfile from "../UI/UserProfile.vue";
+
+export default {
+  components: {
+    UserProfile,
+  },
+};
+</script>
+
 <style lang="scss" scoped>
 header {
-  height: 65px;
+  height: 70px;
   border-bottom: 1px solid var(--lightgray);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+  align-items: center !important;
+  padding: 0 20px;
   .input-group {
     position: relative;
-    width: 100%;
+    width: 16em;
+
     input {
-      height: 40px;
+      height: 38px;
       width: 100%;
       outline: 0;
       padding: 0 17px 0 45px;

@@ -25,6 +25,12 @@ export default {
   // --primaryTextColor: #5e5873;
   --primaryTextColor: #6e6b7b;
   --secondaryTextColor: #b9b9c3;
+
+  // Badges
+  --badge-online: #28c76f;
+  --badge-do-not-disturb: #ea5455;
+  --badge-away: #ff9f43;
+  --badge-offline: #82868b;
 }
 
 * {
@@ -42,13 +48,8 @@ export default {
   margin: 0.5vh auto;
   border-radius: 0.35rem;
   border: 1px solid var(--lightgray);
-
   display: grid;
-  grid-template-columns: 2fr 5fr;
-
-  section {
-  }
-  nav {
-  }
+  grid-template-columns: 0.1fr 1fr;
+  position: relative;
 }
 </style>
