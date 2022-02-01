@@ -1,7 +1,8 @@
 <template>
   <section id="app">
-    <nav>
+    <nav class="navigation">
       <navigation-header></navigation-header>
+      <sidemenu-base></sidemenu-base>
     </nav>
     <router-view></router-view>
   </section>
@@ -9,10 +10,12 @@
 
 <script>
 import NavigationHeader from "./components/Navigation/NavigationHeader.vue";
+import SidemenuBase from "./components/SideMenu/SidemenuBase";
 
 export default {
   components: {
     NavigationHeader,
+    SidemenuBase,
   },
 };
 </script>
@@ -22,7 +25,7 @@ export default {
   --lightgray: #ebe9f1;
   --purple: #7367f0;
 
-  // --primaryTextColor: #5e5873;
+  --mainTextColor: #5e5873;
   --primaryTextColor: #6e6b7b;
   --secondaryTextColor: #b9b9c3;
 
@@ -51,5 +54,6 @@ export default {
   display: grid;
   grid-template-columns: 0.1fr 1fr;
   position: relative;
+  overflow: hidden;
 }
 </style>

@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ["imgSource", "userStatus"],
+  props: ["type", "imgSource", "userStatus"],
 };
 </script>
 
@@ -16,13 +16,13 @@ export default {
   width: 38px;
   height: 38px;
   border: 1px solid #ffffff;
-  border-radius: 25px;
+  border-radius: 100px;
   position: relative;
   cursor: pointer;
   img {
     width: 100%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 100px;
   }
   #profile-status {
     position: absolute;
@@ -31,7 +31,7 @@ export default {
     width: 11px;
     height: 11px;
     border: 1px solid #ffffff;
-    border-radius: 25px;
+    border-radius: 100px;
     &.online {
       background-color: var(--badge-online);
     }
