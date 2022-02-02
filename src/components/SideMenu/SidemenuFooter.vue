@@ -15,6 +15,7 @@ section {
     border: 0;
     border-radius: 0.35rem;
     cursor: pointer;
+    box-shadow: 0 0 10px #ccc;
   }
 }
 </style>

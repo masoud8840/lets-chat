@@ -36,7 +36,6 @@ export default {
   height: 100%;
   top: 0;
   position: absolute;
-  border-right: 1px solid var(--lightgray);
   overflow-y: auto;
   transition: left 0.35s;
   background-color: #ffffff;

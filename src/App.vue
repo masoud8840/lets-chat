@@ -2,6 +2,7 @@
   <section id="app">
     <nav class="navigation">
       <navigation-header></navigation-header>
+      <navigation-body></navigation-body>
       <sidemenu-base></sidemenu-base>
     </nav>
     <router-view @click="changeSidemenuState"></router-view>
@@ -11,10 +12,12 @@
 <script>
 import NavigationHeader from "./components/Navigation/NavigationHeader.vue";
 import SidemenuBase from "./components/SideMenu/SidemenuBase";
+import NavigationBody from "./components/Navigation/NavigationBody.vue";
 
 export default {
   components: {
     NavigationHeader,
+    NavigationBody,
     SidemenuBase,
   },
   methods: {
@@ -65,6 +68,7 @@ export default {
   position: relative;
   nav {
     position: relative;
+    border-right: 1px solid var(--lightgray);
   }
 }
 dialog {

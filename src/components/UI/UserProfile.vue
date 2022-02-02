@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ["type", "imgSource", "userStatus"],
+  props: ["imgSource", "userStatus"],
 };
 </script>
 
