@@ -5,7 +5,8 @@ export default createStore({
     // my profile
     name: "John Doe",
     disctiption: "Admin",
-    subtitle: "",
+    subtitle:
+      "Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.",
     imgSource:
       "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/8.4ac55be3.png",
     profileStatus: "online",

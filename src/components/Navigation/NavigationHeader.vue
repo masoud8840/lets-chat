@@ -31,6 +31,7 @@ header {
   column-gap: 25px;
   align-items: center !important;
   padding: 0 20px;
+  position: relative;
   .input-group {
     position: relative;
     width: 16em;

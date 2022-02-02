@@ -53,7 +53,9 @@ export default {
   border: 1px solid var(--lightgray);
   display: grid;
   grid-template-columns: 0.1fr 1fr;
-  position: relative;
   overflow: hidden;
+  nav {
+    position: relative;
+  }
 }
 </style>
