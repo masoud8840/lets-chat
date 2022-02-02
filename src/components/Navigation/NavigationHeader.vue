@@ -2,6 +2,7 @@
   <header>
     <!-- user-profile should placed in here -->
     <user-profile
+      @click="changeSidemenuState"
       :imgSource="$store.getters.getMyImgSource"
       :userStatus="$store.getters.getMyProfileStatus"
     ></user-profile>
@@ -18,6 +19,11 @@ import UserProfile from "../UI/UserProfile.vue";
 export default {
   components: {
     UserProfile,
+  },
+  methods: {
+    changeSidemenuState() {
+      this.$store.commit("setSidemenuState", true);
+    },
   },
 };
 </script>

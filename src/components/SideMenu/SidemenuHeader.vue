@@ -11,6 +11,10 @@
       </h3>
       <p>{{ $store.getters.getMyDiscription }}</p>
     </div>
+
+    <div class="close-btn" @click="changeSidemenuState">
+      <i class="fas fa-times"></i>
+    </div>
   </div>
 </template>
 <script>
@@ -20,11 +24,15 @@ export default {
   components: {
     UserProfile,
   },
+  methods: {
+    changeSidemenuState() {
+      this.$store.commit("setSidemenuState", false);
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .sidemenu-inner {
-  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   .profile-info {
@@ -46,6 +54,16 @@ export default {
     p {
       font: 400 14px "Montserrat";
       color: var(--primaryTextColor);
+    }
+  }
+  .close-btn {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    color: var(--mainTextColor);
+    cursor: pointer;
+    i {
+      font-size: 19px;
     }
   }
 }

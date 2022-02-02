@@ -10,6 +10,8 @@ export default createStore({
     imgSource:
       "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/8.4ac55be3.png",
     profileStatus: "online",
+
+    sidemenuIsOpen: false,
   },
   getters: {
     getMyImgSource(state) {
@@ -27,8 +29,15 @@ export default createStore({
     getMySubtitle(state) {
       return state.subtitle;
     },
+    getSidemenuState(state) {
+      return state.sidemenuIsOpen;
+    },
   },
-  mutations: {},
+  mutations: {
+    setSidemenuState(state, openState) {
+      state.sidemenuIsOpen = openState;
+    },
+  },
   actions: {},
   modules: {},
 });
