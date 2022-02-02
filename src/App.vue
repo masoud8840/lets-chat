@@ -4,7 +4,7 @@
       <navigation-header></navigation-header>
       <sidemenu-base></sidemenu-base>
     </nav>
-    <router-view></router-view>
+    <router-view @click="changeSidemenuState"></router-view>
   </section>
 </template>
 
@@ -16,6 +16,14 @@ export default {
   components: {
     NavigationHeader,
     SidemenuBase,
+  },
+  methods: {
+    changeSidemenuState() {
+      if (this.$store.getters.getSidemenuState) {
+        this.$store.commit("setSidemenuState", false);
+        console.log("Close");
+      }
+    },
   },
 };
 </script>
@@ -54,8 +62,14 @@ export default {
   display: grid;
   grid-template-columns: 0.1fr 1fr;
   overflow: hidden;
+  position: relative;
   nav {
     position: relative;
   }
+}
+dialog {
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 </style>
