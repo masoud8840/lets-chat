@@ -40,7 +40,7 @@ export default {
   --secondaryTextColor: #b9b9c3;
 
   // Badges
-  --badge-online: #28c76f;
+  --badge-online: #28c76f;  
   --badge-do-not-disturb: #ea5455;
   --badge-away: #ff9f43;
   --badge-offline: #82868b;

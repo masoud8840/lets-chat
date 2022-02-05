@@ -7,8 +7,7 @@ export default createStore({
     disctiption: "Admin",
     subtitle:
       "Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.",
-    imgSource:
-      "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/8.4ac55be3.png",
+    imgSource: require("/src/assets/users/Mine.png"),
     profileStatus: "online",
     sidemenuIsOpen: false,
 
@@ -18,8 +17,7 @@ export default createStore({
         name: "Felecia Rower",
         caption:
           "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing.",
-        imgSource:
-          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/1.9cba4a79.png",
+        imgSource: require("/src/assets/users/Felecia_Rower.png"),
 
         userStatus: "online",
       },
@@ -28,8 +26,7 @@ export default createStore({
         name: "Adalberto Granzin",
         caption:
           "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
-        imgSource:
-          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/2.748e7504.png",
+        imgSource: require("/src/assets/users/Adalberto_Granzin.png"),
         userStatus: "away",
       },
     ],
@@ -39,9 +36,7 @@ export default createStore({
         name: "Felecia Rower",
         caption:
           "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing.",
-        imgSource:
-          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/1.9cba4a79.png",
-
+        imgSource: require("/src/assets/users/Felecia_Rower.png"),
         userStatus: "online",
       },
       {
@@ -49,8 +44,7 @@ export default createStore({
         name: "Adalberto Granzin",
         caption:
           "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
-        imgSource:
-          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/2.748e7504.png",
+        imgSource: require("/src/assets/users/Adalberto_Granzin.png"),
         userStatus: "away",
       },
       {
@@ -58,8 +52,7 @@ export default createStore({
         name: "Joaquina Weisenborn",
         caption:
           "Soufflé soufflé caramels sweet roll. Jelly lollipop sesame snaps bear claw jelly beans sugar plum sugar plum.",
-        imgSource:
-          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/3.5df49333.png",
+        imgSource: require("/src/assets/users/Joaquina_Weisenborn.png"),
         userStatus: "offline",
       },
     ],
