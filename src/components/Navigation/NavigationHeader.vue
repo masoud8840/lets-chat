@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     changeSidemenuState() {
-      this.$store.commit("setSidemenuState", true);
+      this.$store.dispatch("setSidemenuState", true);
     },
   },
 };
@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  height: 70px;
+  height: 65px;
   border-bottom: 1px solid var(--lightgray);
   display: grid;
   grid-template-columns: 1fr 1fr;

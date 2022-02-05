@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     changeSidemenuState() {
-      this.$store.commit("setSidemenuState", false);
+      this.$store.dispatch("setSidemenuState", false);
     },
   },
 };

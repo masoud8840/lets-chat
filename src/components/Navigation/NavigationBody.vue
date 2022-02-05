@@ -2,7 +2,7 @@
   <section class="navigation-body">
     <h3 class="section-title">Chats</h3>
     <ul>
-      <li v-for="user in $store.getters.getContactsList" :key="user">
+      <li v-for="user in $store.getters.getChatsList" :key="user">
         <user-item
           :ID="user.id"
           :name="user.name"

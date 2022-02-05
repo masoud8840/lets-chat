@@ -12,7 +12,27 @@ export default createStore({
     profileStatus: "online",
     sidemenuIsOpen: false,
 
-    ChatsList: [],
+    ChatsList: [
+      {
+        id: "feleciarower",
+        name: "Felecia Rower",
+        caption:
+          "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing.",
+        imgSource:
+          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/1.9cba4a79.png",
+
+        userStatus: "online",
+      },
+      {
+        id: "adalbertogranzin",
+        name: "Adalberto Granzin",
+        caption:
+          "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
+        imgSource:
+          "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-4/img/2.748e7504.png",
+        userStatus: "away",
+      },
+    ],
     ContactsList: [
       {
         id: "feleciarower",
@@ -43,6 +63,8 @@ export default createStore({
         userStatus: "offline",
       },
     ],
+
+    findedUser: {},
   },
   getters: {
     getMyImgSource(state) {
@@ -67,12 +89,34 @@ export default createStore({
     getContactsList(state) {
       return state.ContactsList;
     },
+    getChatsList(state) {
+      return state.ChatsList;
+    },
+
+    getFindedUser(state) {
+      return state.findedUser;
+    },
   },
   mutations: {
     setSidemenuState(state, openState) {
       state.sidemenuIsOpen = openState;
     },
+    setFindedUser(state, id) {
+      const usersList = state.ContactsList;
+      for (const index in usersList) {
+        if (usersList[index].id == id) {
+          state.findedUser = usersList[index];
+        }
+      }
+    },
   },
-  actions: {},
+  actions: {
+    setSidemenuState(context, openState) {
+      context.commit("setSidemenuState", openState);
+    },
+    setFindedUser(context, userID) {
+      context.commit("setFindedUser", userID);
+    },
+  },
   modules: {},
 });

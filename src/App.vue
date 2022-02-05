@@ -23,8 +23,7 @@ export default {
   methods: {
     changeSidemenuState() {
       if (this.$store.getters.getSidemenuState) {
-        this.$store.commit("setSidemenuState", false);
-        console.log("Close");
+        this.$store.dispatch("setSidemenuState", false);
       }
     },
   },
