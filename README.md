@@ -1,24 +1,21 @@
-# lets-chat
+# a simple chat application using Vue,VueX,VueRouter
 
-## Project setup
+### 1.1.Make sure you have installed Node.js on your machine ([Node.js](https://nodejs.org))
+
+### 1.2.Make sure you have installed VueCLI on your machine, after installing node.js run this command below to install VueCLI:
+
+```
+npm install -g @vue/cli
+```
+
+### 2.Install project's packages and dependencies by run this command:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 3.For compiling codes into result for seeing what is there run this command:
+
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
