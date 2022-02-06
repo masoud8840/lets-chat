@@ -5,10 +5,11 @@
 <style lang="scss" scoped>
 section {
   padding: 0 20px;
+  margin-bottom: 25px;
   button {
     margin-top: 50px;
     width: 100%;
-    height: 35px;
+    height: 37px;
     background-color: var(--purple);
     color: #ffffff;
     font: 400 14px "Montserrat";

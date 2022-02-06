@@ -22,6 +22,8 @@ export default createStore({
         messages: [
           {
             text: "hello",
+            from: "feleciarower",
+            imNext: true,
           },
         ],
       },
@@ -35,6 +37,22 @@ export default createStore({
         messages: [
           {
             text: "hello",
+            from: "adalbertogranzin",
+            imNext: true,
+          },
+          {
+            text: "how are you doing?",
+            from: "adalbertogranzin",
+            imNext: false,
+          },
+          {
+            text: "hello",
+            from: "you",
+            imNext: true,
+          },
+          {
+            text: "find thanks and u? ",
+            from: "you",
           },
         ],
       },

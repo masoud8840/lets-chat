@@ -1,13 +1,13 @@
 <template>
-  <section class="user-profile">
+  <section class="user-profile" v-if="!visible">
     <img :src="imgSource" alt="profile-img" />
-    <div id="profile-status" :class="userStatus"></div>
+    <div id="profile-status" :class="userStatus" v-if="userStatus"></div>
   </section>
 </template>
 
 <script>
 export default {
-  props: ["imgSource", "userStatus"],
+  props: ["imgSource", "userStatus", "visible"],
 };
 </script>
 

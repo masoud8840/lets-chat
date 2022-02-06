@@ -33,7 +33,7 @@ a {
   width: 100%;
   display: flex;
   text-decoration: none;
-
+  outline: 0;
   .profile-info {
     padding-left: 15px;
     display: flex;

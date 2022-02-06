@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="chatpage">
     <chatpage-header></chatpage-header>
     <chatpage-body></chatpage-body>
     <chatpage-footer></chatpage-footer>

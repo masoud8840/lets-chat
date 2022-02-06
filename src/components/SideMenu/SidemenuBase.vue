@@ -40,19 +40,4 @@ export default {
   transition: left 0.35s;
   background-color: #ffffff;
 }
-::-webkit-scrollbar {
-  -webkit-appearance: none !important;
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-appearance: none !important;
-  background-color: #f4f4f4;
-  padding: 0 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ddd;
-  border-radius: 0.5rem;
-}
 </style>

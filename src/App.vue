@@ -40,7 +40,7 @@ export default {
   --secondaryTextColor: #b9b9c3;
 
   // Badges
-  --badge-online: #28c76f;  
+  --badge-online: #28c76f;
   --badge-do-not-disturb: #ea5455;
   --badge-away: #ff9f43;
   --badge-offline: #82868b;
@@ -50,6 +50,20 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none !important;
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e2e2e2;
+  border-radius: 0.5rem;
 }
 </style>
 
