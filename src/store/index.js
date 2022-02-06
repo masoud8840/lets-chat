@@ -18,8 +18,12 @@ export default createStore({
         caption:
           "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing.",
         imgSource: require("/src/assets/users/Felecia_Rower.png"),
-
         userStatus: "online",
+        messages: [
+          {
+            text: "hello",
+          },
+        ],
       },
       {
         id: "adalbertogranzin",
@@ -28,25 +32,14 @@ export default createStore({
           "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
         imgSource: require("/src/assets/users/Adalberto_Granzin.png"),
         userStatus: "away",
+        messages: [
+          {
+            text: "hello",
+          },
+        ],
       },
     ],
     ContactsList: [
-      {
-        id: "feleciarower",
-        name: "Felecia Rower",
-        caption:
-          "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing.",
-        imgSource: require("/src/assets/users/Felecia_Rower.png"),
-        userStatus: "online",
-      },
-      {
-        id: "adalbertogranzin",
-        name: "Adalberto Granzin",
-        caption:
-          "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
-        imgSource: require("/src/assets/users/Adalberto_Granzin.png"),
-        userStatus: "away",
-      },
       {
         id: "joaquinaweisenborn",
         name: "Joaquina Weisenborn",
@@ -95,10 +88,17 @@ export default createStore({
       state.sidemenuIsOpen = openState;
     },
     setFindedUser(state, id) {
-      const usersList = state.ContactsList;
-      for (const index in usersList) {
-        if (usersList[index].id == id) {
-          state.findedUser = usersList[index];
+      const chatsList = state.ChatsList;
+      const contactsList = state.ContactsList;
+
+      for (let index in chatsList) {
+        if (chatsList[index].id == id) {
+          state.findedUser = chatsList[index];
+        }
+      }
+      for (let index in contactsList) {
+        if (contactsList[index].id == id) {
+          state.findedUser = contactsList[index];
         }
       }
     },

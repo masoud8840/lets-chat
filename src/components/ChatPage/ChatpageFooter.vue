@@ -51,6 +51,10 @@
     border: 0;
     box-shadow: 0 0 7px #ccc;
     font: 500 14px "Montserrat";
+    cursor: pointer;
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
 </style>

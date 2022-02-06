@@ -52,5 +52,13 @@ a {
   &:hover {
     background-color: #f8f8f8;
   }
+
+  &.router-link-active {
+    background-image: linear-gradient(80deg, #7367f0, #9e95f5);
+    h3,
+    p {
+      color: #ffffff;
+    }
+  }
 }
 </style>
