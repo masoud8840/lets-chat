@@ -18,7 +18,8 @@ export default createStore({
         caption:
           "Cake pie jelly jelly beans. Marzipan lemon drops halvah cake. Pudding cookie lemon drops icing.",
         imgSource: require("/src/assets/users/Felecia_Rower.png"),
-        userStatus: "online",
+        userStatus: "offline",
+
         messages: [
           {
             text: "hello",
@@ -33,7 +34,8 @@ export default createStore({
         caption:
           "Toffee caramels jelly-o tart gummi bears cake I love ice cream lollipop. Sweet liquorice croissant candy danish dessert icing. Cake macaroon gingerbread toffee sweet.",
         imgSource: require("/src/assets/users/Adalberto_Granzin.png"),
-        userStatus: "away",
+        userStatus: "do-not-disturb",
+        tag: "contacts",
         messages: [
           {
             text: "hello",
@@ -56,18 +58,23 @@ export default createStore({
           },
         ],
       },
-    ],
-    ContactsList: [
       {
         id: "joaquinaweisenborn",
         name: "Joaquina Weisenborn",
         caption:
           "Soufflé soufflé caramels sweet roll. Jelly lollipop sesame snaps bear claw jelly beans sugar plum sugar plum.",
         imgSource: require("/src/assets/users/Joaquina_Weisenborn.png"),
-        userStatus: "offline",
+        userStatus: "do-not-disturb",
+      },
+      {
+        id: "verlamorgano",
+        name: "Verla Morgano",
+        caption:
+          "Chupa chups candy canes chocolate bar marshmallow liquorice muffin. Lemon drops oat cake tart liquorice tart cookie. Jelly-o cookie tootsie roll halvah.",
+        imgSource: require("/src/assets/users/Verla_Morgano.png"),
+        userStatus: "online",
       },
     ],
-
     findedUser: {},
   },
   getters: {
@@ -112,12 +119,26 @@ export default createStore({
       for (let index in chatsList) {
         if (chatsList[index].id == id) {
           state.findedUser = chatsList[index];
+          return;
         }
       }
       for (let index in contactsList) {
         if (contactsList[index].id == id) {
           state.findedUser = contactsList[index];
+          return;
         }
+      }
+    },
+
+    sendMessage(state, message) {
+      if (!state.findedUser.messages) {
+        state.findedUser.messages = [message];
+      } else {
+        state.findedUser.messages.push({
+          text: message.text,
+          from: "you",
+          imNext: message.imNext,
+        });
       }
     },
   },
@@ -127,6 +148,15 @@ export default createStore({
     },
     setFindedUser(context, userID) {
       context.commit("setFindedUser", userID);
+    },
+    sendMessage(context, payload) {
+      const message = {
+        text: payload.messageText,
+        from: "you",
+        imNext: payload.imNext,
+      };
+
+      context.commit("sendMessage", message);
     },
   },
   modules: {},

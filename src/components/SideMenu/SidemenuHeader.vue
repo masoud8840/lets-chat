@@ -2,8 +2,8 @@
   <div class="sidemenu-inner">
     <div class="profile-info">
       <user-profile
-        :imgSource="$store.getters.getMyImgSource"
-        :userStatus="$store.getters.getMyProfileStatus"
+        :imgSource="imgSource"
+        :userStatus="profileStatus"
         :type="true"
       ></user-profile>
       <h3>
@@ -23,6 +23,14 @@ import UserProfile from "../UI/UserProfile.vue";
 export default {
   components: {
     UserProfile,
+  },
+  computed: {
+    imgSource() {
+      return this.$store.getters.getMyInfo.imgSource;
+    },
+    profileStatus() {
+      return this.$store.getters.getMyInfo.profileStatus;
+    },
   },
   methods: {
     changeSidemenuState() {

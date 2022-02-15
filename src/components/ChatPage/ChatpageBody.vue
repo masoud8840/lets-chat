@@ -11,7 +11,9 @@
 <script>
 import ChatItem from "../UI/ChatItem.vue";
 
-export default { components: { ChatItem } };
+export default {
+  components: { ChatItem },
+};
 </script>
 
 <style lang="scss" scoped>

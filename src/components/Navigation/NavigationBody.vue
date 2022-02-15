@@ -22,7 +22,7 @@
           :name="user.name"
           :caption="user.caption"
           :imgSource="user.imgSource"
-          :user-status="user.userStatus"
+          :user-status="false"
         ></user-item>
       </li>
     </ul>

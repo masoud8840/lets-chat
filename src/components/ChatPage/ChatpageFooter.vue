@@ -5,10 +5,34 @@
       name="message-input"
       class="message-input"
       placeholder="Enter your message.."
+      v-model.trim="messageText"
+      @keyup.enter="sendMessage"
     />
-    <button>Send</button>
+    <button @click="sendMessage">Send</button>
   </footer>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      messageText: "",
+      imNext: true,
+    };
+  },
+  methods: {
+    sendMessage() {
+      if (this.messageText != "") {
+        this.$store.dispatch("sendMessage", {
+          messageText: this.messageText,
+          imNext: this.imNext,
+        });
+        this.messageText = "";
+      }
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .chatpage-footer {
